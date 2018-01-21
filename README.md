@@ -1,5 +1,5 @@
 # GA_LIB Google Analytics + 1C:Enterprise
-![Logo](./screen/00.png)
+![Logo](./00.png)
 
 Google Analytics + 1C:Enterprise sample | Пример обработки отправки статистики в Google Analytics.
 
