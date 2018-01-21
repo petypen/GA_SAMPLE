@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Главная форма</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОткрытьНастройки" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьФормуНастройки</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьНастройкиРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОткрытьФормуОПрограмме" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьФормуОПрограмме</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьФормуОПрограммеРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="Отмена" id="7">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выход</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="8"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Гр_Note" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Краткое описание действий формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пояснения к фломе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Гр_NoteРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация1" id="13">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;b&gt;Главная форма обработки.
+&lt;/&gt;Информация в Google Analytics отправляется при:
+≡ начале сеанса
+≡ открытии этой формы
+≡ нажатии кнопок открытия дочерних форм
+≡ нажатии кнопок команд B2B
+≡ нажатии кнопки с ошибкой
+</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="15"/>
+				</LabelDecoration>
+				<LabelField name="р_бОтправкаРазрешена" id="16">
+					<DataPath>р_бОтправкаРазрешена</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправка данных в GA</v8:content>
+						</v8:item>
+					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=запрещена; БИ=разрешена</v8:content>
+						</v8:item>
+					</Format>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="р_бОтправкаРазрешенаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="р_бОтправкаРазрешенаРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">УстановитьЦветЭлементов</Event>
+					</Events>
+				</LabelField>
+				<LabelField name="р_бРежимОтладки" id="19">
+					<DataPath>р_бРежимОтладки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим отладки</v8:content>
+						</v8:item>
+					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=отключен; БИ=включен</v8:content>
+						</v8:item>
+					</Format>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="р_бРежимОтладкиКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="р_бРежимОтладкиРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Гр_B2B" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды событий B2B</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр b2 B</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="Гр_B2BРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Button name="B2B_ОтправитьДокумент" id="24">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.B2B_ОтправитьДокумент</CommandName>
+					<ExtendedTooltip name="B2B_ОтправитьДокументРасширеннаяПодсказка" id="25"/>
+				</Button>
+				<Button name="B2B_ПолучитьДокумент" id="26">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.B2B_ПолучитьДокумент</CommandName>
+					<ExtendedTooltip name="B2B_ПолучитьДокументРасширеннаяПодсказка" id="27"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Гр_Error" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка с ошибкой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр error</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="Гр_ErrorРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Button name="ОткрытьНесуществующуюФорму" id="30">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьНесуществующуюФорму</CommandName>
+					<ExtendedTooltip name="ОткрытьНесуществующуюФормуРасширеннаяПодсказка" id="31"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.GA_Sample_UF</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="р_бОтправкаРазрешена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь разрешил отправку данных в GA</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>р_бОтправкаРазрешена</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="р_бРежимОтладки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим отладки отправки данных в GA. Расширенная запись в логи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьФормуНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму "Настройки"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуНастройки</Action>
+		</Command>
+		<Command name="ОткрытьФормуОПрограмме" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму "О программе"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму о программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуОПрограмме</Action>
+		</Command>
+		<Command name="B2B_ОтправитьДокумент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имитация отправки документа в B2B</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>B2B_ОтправитьДокумент</Action>
+		</Command>
+		<Command name="B2B_ПолучитьДокумент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имитация получения документа из B2B</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>B2B_ПолучитьДокумент</Action>
+		</Command>
+		<Command name="ОткрытьНесуществующуюФорму" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть несуществующую форму</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть несуществующую форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНесуществующуюФорму</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="GA">
+			<Type/>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

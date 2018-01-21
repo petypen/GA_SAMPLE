@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаУстановитьНастройки" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьНастройки</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьНастройкиРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаСброситьНастройки" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СброситьНастройки</CommandName>
+				<ExtendedTooltip name="ФормаСброситьНастройкиРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ОК" id="17">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.OK</CommandName>
+				<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="18"/>
+			</Button>
+			<Button name="Отмена" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="5">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="6"/>
+			<ChildItems>
+				<LabelDecoration name="дек_ОписаниеФормы" id="11">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;b&gt;Форма "Настройки"
+&lt;/&gt;Отправка данных в Google Analytics при
+≡ Нажатии кнопок
+≡ Установки опций
+≡ Просмотра формы</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="дек_ОписаниеФормыКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="дек_ОписаниеФормыРасширеннаяПодсказка" id="13"/>
+				</LabelDecoration>
+				<CheckBoxField name="р_бОтправкаРазрешена" id="14">
+					<DataPath>р_бОтправкаРазрешена</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешить отправку данный в Google Analytics</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="р_бОтправкаРазрешенаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="р_бОтправкаРазрешенаРасширеннаяПодсказка" id="16"/>
+					<Events>
+						<Event name="OnChange">р_бОтправкаРазрешенаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГрДисклеймер" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>скрыть подробности</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:ЦветШрифтаСеройПодсказки</TitleTextColor>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр дисклеймер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Collapsible</Behavior>
+					<CollapsedRepresentationTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>подробнее об отправке данных</v8:content>
+						</v8:item>
+					</CollapsedRepresentationTitle>
+					<Collapsed>true</Collapsed>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГрДисклеймерРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<LabelDecoration name="Дек_ТекстДисклеймера" id="24">
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:ЦветШрифтаСеройПодсказки</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация Текст дисклеймера</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Дек_ТекстДисклеймераКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="Дек_ТекстДисклеймераРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="р_бРежимОтладки" id="19">
+					<DataPath>р_бРежимОтладки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включить режим отладки отправки данных</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="р_бРежимОтладкиКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="р_бРежимОтладкиРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">р_бРежимОтладкиПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.GA_Sample_UF</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="р_бОтправкаРазрешена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправка статистики в Google Analytics разрешена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>р_бОтправкаРазрешена</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="р_бРежимОтладки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим отладки отправки в GA</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьНастройки</Action>
+		</Command>
+		<Command name="СброситьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СброситьНастройки</Action>
+		</Command>
+	</Commands>
+</Form>
