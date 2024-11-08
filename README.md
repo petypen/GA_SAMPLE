@@ -1,6 +1,8 @@
 # GA_LIB Google Analytics + 1C:Enterprise
 ![Logo](./SCREEN/00.png)
 
+[![OpenYellow](https://img.shields.io/endpoint?url=https://openyellow.org/data/badges/1/118334257.json)](https://openyellow.org/grid?data=top&repo=118334257)
+
 Google Analytics + 1C:Enterprise sample | Пример обработки отправки статистики в Google Analytics.
 
 ## Что это?
